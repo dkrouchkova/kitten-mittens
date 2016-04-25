@@ -1,0 +1,215 @@
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*---------------------*/
+/* Main Styles */
+/*---------------------*/
+body {
+	background: $light-blue;
+	color: $black;
+}
+
+main {
+	@include container(960px);
+}
+
+// main,
+// aside,
+// section,
+// footer {
+// 	@include box();
+// }
+
+section {
+	@extend .clearfixed;
+}
+
+h1,
+h2 {
+	font-family: 'Righteous', cursive;
+}
+
+h2 {
+	padding: 5% 0%;
+} 
+
+h3,
+p,
+a,
+figcaption {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+	color: $dark-blue;
+
+	&:hover {
+		color: $med-blue;
+	}//hover
+
+	&:visited {
+		color: $purple;
+	}
+}//a
+
+/*---------------------*/
+/* header */
+/*---------------------*/
+
+header {
+	background: url("..//img/blue-bkg.jpg") 0 0 no-repeat; 
+	background-size: cover;
+	height: 50vh;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	padding-top: 10em;
+	text-align: center;
+
+	h1 {
+		font-size: 4em;
+		color: $white;
+		text-shadow: -4px -4px $black;
+	}//h1
+} //header
+
+/*---------------------*/
+/* main */
+/*---------------------*/
+
+
+/*---------------------*/
+/* projects */
+/*---------------------*/
+
+.projects {
+	@include span(8);
+
+	h2 {
+		text-align: center;
+	}//h2
+
+	.gallery {
+		
+	} //gallery
+	
+	figure {
+		@include span(3 of 8);
+		// @extend .imghvr-blur;
+		width: 46%; 
+		margin: 2%;
+		text-align: center;
+		// border: solid 1px $purple;
+
+		img {
+			width: 100%;
+			border: solid 2px $purple;
+			border-radius: 50%;
+
+			&:hover {
+				@include animation(fade .5s ease-in forwards)
+
+			}//hover
+		}//img
+
+	} //figure
+
+} //projects
+
+
+@include keyframes(fade) {
+	0% {opacity: 1;}
+	100% {opacity: .5;}
+}
+
+/*---------------------*/
+/* demos & links */
+/*---------------------*/
+
+.in-class,
+.link-to {
+	@include span(3);
+	float: right;
+	padding: 2%;
+	text-align: left;
+
+	h3 {
+		padding: 1%;
+	} //h3
+
+} //.in-class & .link-to
+
+
+
+/*---------------------*/
+/* footer */
+/*---------------------*/
+
+footer {
+	@include span(12);
+	
+	height: 40px;
+	padding: 2%;
+	text-align: center;
+	font-size: 0.8em;
+
+}
+
+
+/*---------------------*/
+/* BREAKPOINTS */
+/*---------------------*/
+
+@include susy-breakpoint ($medium) {
+	.projects {
+		@include span(7);
+		figure {
+			@include span(5 of 8);
+			margin-left: 20%;
+		}//figure
+	}//projects
+
+	.in-class,
+	.link-to {
+		@include span(4);
+	}//.in-class & .link-to
+}
+
+@include susy-breakpoint ($small) {
+	main {
+		margin-left: 8%;
+	}
+
+	.projects {
+		@include span(12);
+		figure {
+			@include span(5 of 12);
+			font-size: 80%;
+		}//figure
+	}//projects
+
+	.in-class,
+	.link-to {
+		@include span(6);
+	}//.in-class & .link-to
+}
+
+
+
+
+
+
+
+
