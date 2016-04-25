@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Righteous|Noto+Sans);
+@import url(https://fonts.googleapis.com/css?family=Cinzel:400,900|Open+Sans);
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -30,11 +30,6 @@ a {
 /*---------------------*/
 /* Main Styles */
 /*---------------------*/
-body {
-  background: #c3f3f5;
-  color: #0c0a0e;
-}
-
 main {
   max-width: 960px;
   margin-left: auto;
@@ -48,7 +43,7 @@ main:after {
 
 h1,
 h2 {
-  font-family: 'Righteous', cursive;
+  font-family: 'Cinzel', serif;
 }
 
 h2 {
@@ -59,114 +54,36 @@ h3,
 p,
 a,
 figcaption {
-  font-family: 'Noto Sans', sans-serif;
-}
-
-a {
-  color: #2857bf;
-}
-a:hover {
-  color: #129ade;
-}
-a:visited {
-  color: #61527d;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /*---------------------*/
 /* header */
 /*---------------------*/
 header {
-  background: url("..//img/blue-bkg.jpg") 0 0 no-repeat;
+  background: gray;
   background-size: cover;
-  height: 50vh;
+  height: 70vh;
   margin-left: 0 auto;
   margin-right: 0 auto;
   padding-top: 10em;
   text-align: center;
 }
-header h1 {
-  font-size: 4em;
-  color: white;
-  text-shadow: -4px -4px #0c0a0e;
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /*---------------------*/
 /* main */
 /*---------------------*/
-/*---------------------*/
-/* projects */
-/*---------------------*/
-.projects {
-  width: 66.66667%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-}
-.projects h2 {
-  text-align: center;
-}
-.projects figure {
-  width: 37.5%;
-  float: left;
-  padding-left: 1.25%;
-  padding-right: 1.25%;
-  width: 46%;
-  margin: 2%;
-  text-align: center;
-}
-.projects figure img {
-  width: 100%;
-  border: solid 2px #61527d;
-  border-radius: 50%;
-}
-.projects figure img:hover {
-  -moz-animation: fade 0.5s ease-in forwards;
-  -webkit-animation: fade 0.5s ease-in forwards;
-  animation: fade 0.5s ease-in forwards;
-}
-
-@-moz-keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .5;
-  }
-}
-@-webkit-keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .5;
-  }
-}
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .5;
-  }
-}
-/*---------------------*/
-/* demos & links */
-/*---------------------*/
-.in-class,
-.link-to {
-  width: 25%;
-  float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
-  float: right;
-  padding: 2%;
-  text-align: left;
-}
-.in-class h3,
-.link-to h3 {
-  padding: 1%;
-}
-
 /*---------------------*/
 /* footer */
 /*---------------------*/
@@ -184,53 +101,3 @@ footer {
 /*---------------------*/
 /* BREAKPOINTS */
 /*---------------------*/
-@media (min-width: 481px) and (max-width: 768px) {
-  .projects {
-    width: 58.33333%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-  }
-  .projects figure {
-    width: 62.5%;
-    float: left;
-    padding-left: 1.25%;
-    padding-right: 1.25%;
-    margin-left: 20%;
-  }
-
-  .in-class,
-  .link-to {
-    width: 33.33333%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-  }
-}
-@media (min-width: 1px) and (max-width: 480px) {
-  main {
-    margin-left: 8%;
-  }
-
-  .projects {
-    width: 100%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-  }
-  .projects figure {
-    width: 41.66667%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    font-size: 80%;
-  }
-
-  .in-class,
-  .link-to {
-    width: 50%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-  }
-}

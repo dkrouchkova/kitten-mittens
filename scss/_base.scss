@@ -18,8 +18,8 @@ a {
 /* Main Styles */
 /*---------------------*/
 body {
-	background: $light-blue;
-	color: $black;
+	// background: $light-blue;
+	// color: $black;
 }
 
 main {
@@ -39,7 +39,7 @@ section {
 
 h1,
 h2 {
-	font-family: 'Righteous', cursive;
+	font-family: 'Cinzel', serif;
 }
 
 h2 {
@@ -50,106 +50,52 @@ h3,
 p,
 a,
 figcaption {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
-a {
-	color: $dark-blue;
+// a {
+// 	color: ;
 
-	&:hover {
-		color: $med-blue;
-	}//hover
+// 	&:hover {
+// 		color: ;
+// 	}//hover
 
-	&:visited {
-		color: $purple;
-	}
-}//a
+// 	&:visited {
+// 		color:;
+// 	}
+// }//a
 
 /*---------------------*/
 /* header */
 /*---------------------*/
 
 header {
-	background: url("..//img/blue-bkg.jpg") 0 0 no-repeat; 
+	background: gray;
 	background-size: cover;
-	height: 50vh;
+	height: 70vh;
 	margin-left: 0 auto;
 	margin-right: 0 auto;
 	padding-top: 10em;
 	text-align: center;
-
-	h1 {
-		font-size: 4em;
-		color: $white;
-		text-shadow: -4px -4px $black;
-	}//h1
 } //header
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
 /*---------------------*/
 /* main */
 /*---------------------*/
 
 
-/*---------------------*/
-/* projects */
-/*---------------------*/
 
-.projects {
-	@include span(8);
-
-	h2 {
-		text-align: center;
-	}//h2
-
-	.gallery {
-		
-	} //gallery
-	
-	figure {
-		@include span(3 of 8);
-		// @extend .imghvr-blur;
-		width: 46%; 
-		margin: 2%;
-		text-align: center;
-		// border: solid 1px $purple;
-
-		img {
-			width: 100%;
-			border: solid 2px $purple;
-			border-radius: 50%;
-
-			&:hover {
-				@include animation(fade .5s ease-in forwards)
-
-			}//hover
-		}//img
-
-	} //figure
-
-} //projects
-
-
-@include keyframes(fade) {
-	0% {opacity: 1;}
-	100% {opacity: .5;}
-}
-
-/*---------------------*/
-/* demos & links */
-/*---------------------*/
-
-.in-class,
-.link-to {
-	@include span(3);
-	float: right;
-	padding: 2%;
-	text-align: left;
-
-	h3 {
-		padding: 1%;
-	} //h3
-
-} //.in-class & .link-to
 
 
 
@@ -173,37 +119,11 @@ footer {
 /*---------------------*/
 
 @include susy-breakpoint ($medium) {
-	.projects {
-		@include span(7);
-		figure {
-			@include span(5 of 8);
-			margin-left: 20%;
-		}//figure
-	}//projects
 
-	.in-class,
-	.link-to {
-		@include span(4);
-	}//.in-class & .link-to
 }
 
 @include susy-breakpoint ($small) {
-	main {
-		margin-left: 8%;
-	}
 
-	.projects {
-		@include span(12);
-		figure {
-			@include span(5 of 12);
-			font-size: 80%;
-		}//figure
-	}//projects
-
-	.in-class,
-	.link-to {
-		@include span(6);
-	}//.in-class & .link-to
 }
 
 
