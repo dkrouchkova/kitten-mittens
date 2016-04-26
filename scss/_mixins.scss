@@ -1,5 +1,5 @@
 @mixin box() {
-	background: $transwhite;
+	background: $blue;
 }
 
 @mixin clearfixed () {
@@ -9,7 +9,6 @@
 		clear: both;
 	}
 }
-
 
 //css rule but you apply extend to it
 //extend ends up with less mark up produced
